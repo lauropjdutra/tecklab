@@ -50,8 +50,7 @@ html {
    }
 
 body {
-     color: #ffffff;
-     
+     color: #ffffff;     
      font-family: 'Raleway', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
@@ -84,9 +83,95 @@ h6 {
      margin: 0
 }
 
-h1 {
-     font-size: 24px;
-     font-family: 'Lemon Milk';
+main {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+.bg-container {
+     position: absolute;
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     background: url("../images/banner_.png");
+     background-repeat: no-repeat;
+     background-size: cover;
+     z-index: -5;
+}
+
+.limit {
+     max-width: 1400px;
+}
+
+.hero-container {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     z-index: 9;
+     padding: 150px 0 250px;
+}
+
+.hero-container img {
+     width: 50%;
+     border-radius: 10px;
+}
+
+.text-container {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     color: #fff;
+     text-align: center;
+     width: 40%;
+}
+
+.text-container p {
+     line-height: 27px;
+}
+
+.text-container h2 {
+     font-size: 40px;
+     color: #fff;
+     font-weight: bold;
+}
+
+.resrc-container {
+     padding: 10% 5%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     gap: 35px;
+     flex-wrap: wrap;
+}
+
+.item {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 5px;
+     justify-content: flex-start;
+     border: 1px solid #12153c;
+     border-radius: 30px;
+     padding: 50px 0;
+     height: 300px;
+     width: 30%;
+     color: #000;
+}
+
+.item h4 {
+     font-size: 60px;
+     color: #0978b8;
+}
+
+.item h3 {
+     font-weight: bold;
+}
+
+.item p {
+     text-align: center;
+     width: 70%;
 }
 
 h2 {
@@ -446,7 +531,7 @@ border-radius: 10px;
      font-size: 17px;
      background-color: transparent;
      border:#fff solid 2px;
-     border-radius: 10px;
+     border-radius: 30px;
      color: #fff;
      font-weight: 600;
      padding: 13px 0px;
@@ -454,12 +539,12 @@ border-radius: 10px;
      max-width: 200px;
      text-align: center;
      display: inline-block;
-     transition: ease-in all 0.2s;
+     transition: ease-in-out all 0.2s;
 }
 
 .text-bg a:hover {
      background-color: #ffffff;
-     color: #40b9ff;
+     color: #12153c;
      border: 2px solid #ffffff;
 }
 
@@ -680,22 +765,26 @@ border-radius: 10px;
 }
 
 .main_form .send_btn {
-     font-size: 17px;
-     transition: ease-in all 0.2s;
-     font-weight: bold;
-     background-color: #eee;
-     color: #000;
-     padding: 13px 0px;
+     font-size: 18px;
+     transition: ease-in-out all 0.2s;
+     font-weight: bolder;
+     background-color: #fff;
+     color: #12153c;
+     padding: 12px 0px;
      margin: 0 auto;
      max-width: 200px;
      width: 100%;
      display: block;
      margin-top: 30px;
-     border-radius: 10px;
+     border-radius: 30px;
 }
 
 .main_form .send_btn:hover {
-     background: #40b9ff;
+     opacity: 0.8;
+}
+
+.main_form .send_btn:active {
+     opacity: 0.7;
 }
 
 #contact *::placeholder {
@@ -824,7 +913,7 @@ border-radius: 10px;
 
 .footer {
      background: #12153c;
-     padding-top: 85px;
+     /* padding-top: 5px; */
      text-align: center;
      padding-bottom: 5px;
      position: relative;
@@ -854,12 +943,12 @@ right: 0;
 }
 
 .cont {
-     padding-top: 20px;
+     padding-top: 10px;
      text-align: center;
 }
 
 .cont h3 {
-     color: #fff;
+     color: #12153c;
      font-size: 45px;
      line-height: 65px;
      font-weight: bold;
@@ -875,15 +964,20 @@ right: 0;
 }
 
 .cont .read_more {
+     margin-bottom: 30px;
      background-color: #40b9ff;
      border-radius: 30px;
      color: #000;
      font-weight: 900;
+     transition: all ease-in-out 0.2s;
 }
 
 .cont .read_more:hover {
-     background-color: #02185b;
-     color: #ddd;
+     opacity: 0.8;
+}
+
+.cont .read_more:active {
+     opacity: 0.7;
 }
 
 .copyright {
@@ -894,10 +988,12 @@ right: 0;
 
 .copyright p {
      color: #bcbdc3;
-     font-size: 18px;
-     line-height: 22px;
+     font-family: "Poppins";
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 25px;
      text-align: center;
-     border-top: #84761d solid 1px;
+     /* border-top: #bcbdc3ee solid 1px; */
      padding-top: 20px;
 }
 
